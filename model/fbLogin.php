@@ -9,7 +9,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 
-$permissions = ['email']; // Optional permissions
+$permissions = ['email','user_likes']; // Optional permissions
 $loginUrl = $helper->getLoginUrl('http://localhost/olx/web/index.php/Login/submit', $permissions);
 
 echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
