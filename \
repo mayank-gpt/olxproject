@@ -1,0 +1,11 @@
+<?php
+$path = explode("/",$_SERVER['PATH_INFO']) ; 
+$class= $path[1] ;
+$function= $path[2]."()" ;
+echo $function ; 
+echo $class . $function ; 
+include("./controller/".$class.".php") ; 
+$className = new $class() ;
+$className-> $function ; 
+
+echo "dd" ;  die;
