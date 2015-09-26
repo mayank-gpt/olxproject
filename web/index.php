@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors" ,1)  ;
+//include("/home/mayank/Downloads/facebook-php-sdk-v4-5.0-dev/src/Facebook/autoload.php") ;
 function __autoload($class) {
 	include("../controller/".$class.".php") ; 
 }

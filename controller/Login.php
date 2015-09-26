@@ -1,17 +1,19 @@
 <?php
 ini_set("display_errors" , 1)  ; 
 class Login extends Controller {
+ private $modelClass  ;
+ public function __construct() {
+$this->modelClass = $this->loadModel ('LoginModel')   ; 
 
-// public function __construct() {
-//}
+}
 	public function loginPage() {
-$this->loadView ('login') ;  
+$this->modelClass->login() ;  
 		return ;
 	}
 
 public function submit() {
-echo "Logged in" ; 
 
 
+$this->modelClass->callback() ;  
 }
 }
